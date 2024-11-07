@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Visualization Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Intermediate Layer Analysis Tool</h1>
+        <h2>Course Name: IE 643 Deep Learning</h2>
+        <h2>Team Name: Positron</h3>
+    </header>
+    <form>
+        <button onclick="location.href='/single_view'" type="button">Visualize Single Model</button>
+        <button onclick="location.href='/comparison_view'" type="button">Compare Models</button>
+    </form>
+</body>
+</html>

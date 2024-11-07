@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Model Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/single_view.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Visualisation of Intermediate Outputs</h1>
+        <h2>Project: Intermediate Layer Analysis</h2>
+        <h3>Team: Positron | Course: IE 643 Deep Learning</h3>
+    </header>
+    <div id = "formcontainer">
+
+        <form id="singleForm">
+            <label for="initialization">Initialization</label>
+            <select id="initialization" name="initialization">
+                <option value="output_he">HE Initialization</option>
+                <option value="output_xavier">Xavier Initialization</option>
+                <option value="output_orthogonal">Orthogonal Initialization</option>
+                <option value="output_custom_normal">Custom Uniform Initialization</option>
+                <option value="output_lecun">LeCun Normal Initialization</option>
+                <option value="output_sine_cosine">Sine Cosine Initialization</option>
+                <option value="output_scaled_orthogonal">Scaled Orthogonal Initialization</option>
+            </select>
+
+        <label for="feature">Feature</label>
+        <select id="feature" name="feature">
+            <option value="activations_heatmap">Activations Heatmap</option>
+            <option value="activations_histogram">Activations Histogram</option>
+            <option value="covariance_heatmap">Covariance Heatmap</option>
+            <option value="gradients_boxplot">Gradients Boxplot</option>
+            <option value="gradients_histogram">Gradients Histogram</option>
+        </select>
+        
+        <label for="block">Block</label>
+        <select id="block" name="block">
+            <option value="3">Block 4</option>
+            <option value="7">Block 8</option>
+        </select>
+
+        <label>Transformer Layer</label>
+        <select id="transformer_layer" name="transformer_layer">
+            <option value="attention">Attention</option>
+            <option value="mlp">MLP</option>
+        </select>
+        
+        <label for="mode">Mode</label>
+        <select id="mode" name="mode">
+            <option value="all_epochs">All Epochs</option>
+            <option value="single_epoch">Single Epoch</option>
+        </select>
+        
+
+        <label for="epoch_or_batch">Epoch- single epoch mode: values 0-9 </label>
+        <input type="number" id="epoch_or_batch" placeholder="Epoch/Batch" />
+        
+        <button type="button" onclick="loadSingleAnimation()">Load Animation</button>
+    </form>
+    
+    <div id="animationContainer">
+        <img id="singleAnimation" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Animation will appear here">
+    </div>
+</div>
+</body>
+</html>

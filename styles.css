@@ -1,0 +1,107 @@
+/* Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3e5f5;
+    color: #4a148c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #7b1fa2;
+}
+
+/* Form Styling */
+form {
+    background-color: #ede7f6;
+    border: 1px solid #ce93d8;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+#formcontainer{
+    display: flex;
+    /* margin-left:0px; */
+    /* flex-direction: row; */
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+label {
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+}
+
+select, input[type="number"], button {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #7b1fa2;
+}
+
+button {
+    background-color: #8e24aa;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #6a1b9a;
+}
+
+/* Animation Container */
+#animationContainer, #comparisonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+}
+
+img {
+    border-radius: 8px;
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#animation_1, #animation_2 {
+    width: 80%;
+    margin: 0 10px;
+}
+
+/* Footer Info */
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #6a1b9a;
+}
